@@ -124,6 +124,17 @@ nav, main, footer, section, .hero, .form-page, .page-hero, .container {
   padding: 60px 40px;
 }
 
+.main-system-title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.998);
+  letter-spacing: 0.5px;
+  text-align: center; 
+}
 .hero-box {
   max-width: 780px;
   background: rgba(255, 255, 255, 0.07);
@@ -131,6 +142,7 @@ nav, main, footer, section, .hero, .form-page, .page-hero, .container {
   border-radius: 20px;
   padding: 60px;
   border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 120px;
 }
 
 .hero-tag {
@@ -422,7 +434,7 @@ nav, main, footer, section, .hero, .form-page, .page-hero, .container {
   display: block;
   font-size: 15px;
   font-weight: 700;
-  color: #e2e8f0;
+  color: #000000d6;
 }
 
 .wh-tags {
@@ -650,13 +662,13 @@ nav, main, footer, section, .hero, .form-page, .page-hero, .container {
   padding: 12px 16px;
   border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.15);
-  background: rgba(255,255,255,0.08);
-  color: white;
+  background: #f8f9fa;
+  color: #000000;
   font-size: 14px;
   font-family: 'Inter', sans-serif;
 }
 
-.form input::placeholder { color: rgba(255,255,255,0.4); }
+.form input::placeholder { color: #6c757d; }
 .form select option { background: #1e293b; color: white; }
 
 /* ───── TABLE ───── */
@@ -703,6 +715,37 @@ tr:hover td { background: #f1f5f9; }
 }
 
 .delete-btn:hover { background: #dc2626; }
+
+/* ───── ACTION BUTTONS IN TABLE ───── */
+.action-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-right: 4px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.action-btn.stock-in {
+  background: #38bdf8;
+  color: white;
+}
+
+.action-btn.stock-in:hover {
+  background: #0ea5e9;
+}
+
+.action-btn.stock-out {
+  background: #f59e0b;
+  color: white;
+}
+
+.action-btn.stock-out:hover {
+  background: #d97706;
+}
 
 /* ───── ADMIN PAGE ───── */
 .admin-grid {

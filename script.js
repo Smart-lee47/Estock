@@ -276,6 +276,46 @@ function deleteProduct(productId) {
   updateStats();
 }
 
+// -- Stock In Product (dashboard.html) --
+function stockIn(productId) {
+  const qty = parseInt(prompt('Enter quantity to add to stock:'));
+  if (isNaN(qty) || qty <= 0) {
+    alert('Please enter a valid positive number.');
+    return;
+  }
+
+  let products = JSON.parse(localStorage.getItem(PRODUCTS_KEY) || '[]');
+  const product = products.find(p => p.id == productId);
+  if (product) {
+    product.qty += qty;
+    localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
+    renderTable();
+    updateStats();
+  }
+}
+
+// -- Stock Out Product (dashboard.html) --
+function stockOut(productId) {
+  const qty = parseInt(prompt('Enter quantity to remove from stock:'));
+  if (isNaN(qty) || qty <= 0) {
+    alert('Please enter a valid positive number.');
+    return;
+  }
+
+  let products = JSON.parse(localStorage.getItem(PRODUCTS_KEY) || '[]');
+  const product = products.find(p => p.id == productId);
+  if (product) {
+    if (product.qty < qty) {
+      alert('Cannot remove more than available stock.');
+      return;
+    }
+    product.qty -= qty;
+    localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
+    renderTable();
+    updateStats();
+  }
+}
+
 
 // -- Render Inventory Table (dashboard.html) --
 function renderTable() {
@@ -296,7 +336,11 @@ function renderTable() {
       <td>${p.category}</td>
       <td>${p.qty}</td>
       <td>${p.dateAdded}</td>
-      <td><button class="delete-btn" onclick="deleteProduct(${p.id})">Delete</button></td>
+      <td>
+        <button class="action-btn stock-in" onclick="stockIn(${p.id})">Stock In</button>
+        <button class="action-btn stock-out" onclick="stockOut(${p.id})">Stock Out</button>
+        <button class="delete-btn" onclick="deleteProduct(${p.id})">Delete</button>
+      </td>
     </tr>
   `).join('');
 }
