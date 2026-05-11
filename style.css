@@ -132,13 +132,19 @@ nav, main, footer, section, .hero, .form-page, .page-hero, .container {
   font-size: 50px;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.998);
-  letter-spacing: 0.5px;
+  letter-spacing: 3.5px;
   text-align: center; 
+  margin-bottom: 2rem;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+ .main-system-title span {
+  color: brown;
 }
 .hero-box {
   max-width: 780px;
   background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(15px);
   border-radius: 20px;
   padding: 60px;
   border: 1px solid rgba(255, 255, 255, 0.15);
