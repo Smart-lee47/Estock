@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stockish | Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h1 class="logo">Stockish — Admin</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="warehouses.html">Warehouses</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="signup.html" class="nav-btn">Get Started</a></li>
+    <li><button onclick="adminLogout()" class="nav-btn" style="background:none; border:none; cursor:pointer; font-size:inherit;">Logout</button></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <h1>Admin Panel</h1>
+  <p>Full overview of all registered companies, bookings, and inventory across all warehouses.</p>
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<main class="container">
+
+  <!-- STAT CARDS filled by loadAdmin() in script.js -->
+  <div class="admin-grid">
+    <div class="admin-card">
+      <h3>Registered Companies</h3>
+      <p id="adminTotalCompanies">0</p>
+    </div>
+    <div class="admin-card">
+      <h3>Total Products Stored</h3>
+      <p id="adminTotalProducts">0</p>
+    </div>
+    <div class="admin-card">
+      <h3>Total Stock Units</h3>
+      <p id="adminTotalStock">0</p>
+    </div>
+    <div class="admin-card">
+      <h3>Active Warehouses</h3>
+      <p>5</p>
+    </div>
+  </div>
+
+  <!-- REGISTERED COMPANIES TABLE -->
+  <p class="admin-section-title">Registered Companies</p>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Company Name</th>
+        <th>Business Type</th>
+        <th>Contact Person</th>
+        <th>Email</th>
+        <th>Warehouse</th>
+        <th>Service</th>
+        <th>Slots</th>
+        <th>Registered On</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="adminCompaniesList"></tbody>
+  </table>
+
+  <!-- ALL PRODUCTS TABLE -->
+  <p class="admin-section-title">All Products in Storage</p>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Company</th>
+        <th>Product Name</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        <th>Date Added</th>
+      </tr>
+    </thead>
+    <tbody id="adminProductsList"></tbody>
+  </table>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h2>Stockish</h2>
+      <p>Rwanda's professional warehouse and inventory management partner.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="warehouses.html">Warehouses</a>
+      <a href="services.html">Services</a>
+      <a href="signup.html">Register</a>
+      <a href="about.html">About</a>
+      <a href="Admin.html">Admin</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Stockish | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

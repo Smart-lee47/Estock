@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stockish | Company Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h1 class="logo">Stockish</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="warehouses.html">Warehouses</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="signup.html" class="nav-btn">Get Started</a></li>
+  </ul>
+</nav>
+
+<!-- LOGIN FORM -->
+<div class="form-page">
+  <div class="form-card">
+
+    <!-- Form heading and subtitle -->
+    <h2>Company Login</h2>
+    <p class="sub">Enter your company credentials to access your inventory dashboard.</p>
+
+    <!-- LOGIN FORM -->
+    <div class="form-group">
+      <input type="email" id="companyEmail" placeholder="Company email" required />
+      <span class="error" id="companyEmailError"></span>
+      <input type="password" id="companyPassword" placeholder="Password" required />
+      <span class="error" id="companyPasswordError"></span>
+    </div>
+
+    <!-- LOGIN BUTTON -->
+    <button class="btn" onclick="companyLogin()">Login</button>
+
+    <!-- ERROR MESSAGE -->
+    <div class="error-msg" id="companyLoginError" style="display:none;">
+      ❌ Invalid email or password. Please try again.
+    </div>
+
+    <!-- SIGNUP LINK -->
+    <p style="text-align:center; margin-top:20px; opacity:0.8;">
+      Don't have an account? <a href="signup.html" style="color:#22c55e;">Register here</a>
+    </p>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h2>Stockish</h2>
+      <p>Rwanda's professional warehouse and inventory management partner.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="warehouses.html">Warehouses</a>
+      <a href="services.html">Services</a>
+      <a href="signup.html">Register</a>
+      <a href="about.html">About</a>
+      <a href="Admin.html">Admin</a>
+      <a href="company-login.html">Company Login</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Stockish | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

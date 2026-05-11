@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stockish | Register Your Company</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h1 class="logo">Stockish</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="warehouses.html">Warehouses</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="signup.html" class="nav-btn">Get Started</a></li>
+  </ul>
+</nav>
+
+<!-- SIGNUP FORM -->
+<div class="form-page">
+  <div class="form-card">
+
+    <!-- Form heading and subtitle -->
+    <h2>Register Your Company</h2>
+    <p class="sub">Fill in your company details below to get access to Stockish warehouses and services.</p>
+
+    <!-- COMPANY INFORMATION -->
+    <div class="form-group">
+      <input type="text" id="companyName" placeholder="Company name" required />
+      <input type="text" id="companyType" placeholder="Type of business (e.g. Food Distributor)" required />
+      <input type="text" id="contactPerson" placeholder="Contact person full name" required />
+      <input type="email" id="contactEmail" placeholder="Company email address" required />
+      <span class="error" id="emailError"></span>
+      <input type="tel" id="contactPhone" placeholder="Phone number" required />
+    </div>
+
+    <!-- WAREHOUSE SELECTION -->
+    <div class="form-group">
+      <select id="warehouseChoice">
+        <option value="" disabled selected>Select a warehouse</option>
+        <option value="Warehouse A — General Storage">Warehouse A — General Storage</option>
+        <option value="Warehouse B — Cold Storage">Warehouse B — Cold Storage</option>
+        <option value="Warehouse C — Bulk Storage">Warehouse C — Bulk Storage</option>
+        <option value="Warehouse D — Secure Storage">Warehouse D — Secure Storage</option>
+        <option value="Warehouse E — Logistics Hub">Warehouse E — Logistics Hub</option>
+      </select>
+    </div>
+
+    <!-- SERVICE SELECTION -->
+    <div class="form-group">
+      <select id="serviceChoice">
+        <option value="" disabled selected>Select a service</option>
+        <option value="Warehousing">Warehousing</option>
+      <option value="Cold Chain Management">Cold Chain Management</option>
+      <option value="Logistics & Distribution">Logistics & Distribution</option>
+        <option value="Bulk Storage">Bulk Storage</option>
+      </select>
+    </div>
+
+    <!-- SLOT COUNT -->
+    <div class="form-group">
+      <input type="number" id="slotsNeeded" placeholder="Number of storage slots needed" min="1" required />
+    </div>
+
+    <!-- PASSWORD FIELDS -->
+    <div class="form-group">
+      <input type="password" id="signupPassword" placeholder="Password (minimum 16 characters)" required />
+      <span class="error" id="passwordError"></span>
+      <input type="password" id="signupPasswordConfirm" placeholder="Confirm password" required />
+      <span class="error" id="passwordConfirmError"></span>
+    </div>
+
+    <!-- SUBMIT BUTTON -->
+    <button class="btn" onclick="registerCompany()">Submit Registration</button>
+
+    <!-- SUCCESS MESSAGE — hidden until form is submitted -->
+    <div class="success-msg" id="successMsg">
+      ✅ Registration successful! Welcome to Stockish.<br>
+      Your company has been registered. <a href="dashboard.html" style="color:#86efac;">Go to your Dashboard →</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h2>Stockish</h2>
+      <p>Rwanda's professional warehouse and inventory management partner.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="warehouses.html">Warehouses</a>
+      <a href="services.html">Services</a>
+      <a href="signup.html">Register</a>
+      <a href="about.html">About</a>
+      <a href="Admin.html">Admin</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Stockish | All Rights Reserved</p>
+</footer>
+
+<!-- All JavaScript is written in the external script.js file -->
+<script src="script.js"></script>
+
+</body>
+</html>

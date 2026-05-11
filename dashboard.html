@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stockish | Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h1 class="logo">Stockish</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="warehouses.html">Warehouses</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="signup.html" class="nav-btn">Get Started</a></li>
+    <li><button onclick="companyLogout()" class="nav-btn" style="background:none; border:none; cursor:pointer; font-size:inherit;">Logout</button></li>
+  </ul>
+</nav>
+
+<!-- DASHBOARD CONTENT -->
+<main class="container">
+
+  <!-- Company greeting filled dynamically by script.js -->
+  <h2 id="dashboardTitle">Inventory Dashboard</h2>
+  <p id="companyInfo" style="opacity:0.6; margin-top:-20px; margin-bottom:30px; font-size:14px;"></p>
+
+  <!-- STAT CARDS updated by updateStats() in script.js -->
+  <div class="cards">
+    <div class="card">
+      <h3>Total Products</h3>
+      <p id="totalProducts">0</p>
+    </div>
+    <div class="card">
+      <h3>Total Stock</h3>
+      <p id="totalStock">0</p>
+    </div>
+    <div class="card">
+      <h3>Warehouse</h3>
+      <p id="warehouseCard" style="font-size:16px; margin-top:8px;">—</p>
+    </div>
+    <div class="card">
+      <h3>Service</h3>
+      <p id="serviceCard" style="font-size:16px; margin-top:8px;">—</p>
+    </div>
+  </div>
+
+  <!-- ADD PRODUCT FORM -->
+  <div class="form">
+    <input type="text" id="productName" placeholder="Product name" />
+    <input type="number" id="productQty" placeholder="Quantity" min="1" />
+    <input type="text" id="productCategory" placeholder="Category (e.g. Electronics)" />
+    <button class="btn" onclick="addProduct()">Add Product</button>
+  </div>
+
+  <!-- INVENTORY TABLE rows injected by renderTable() in script.js -->
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Product Name</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        <th>Date Added</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="productList"></tbody>
+  </table>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h2>Stockish</h2>
+      <p>Rwanda's professional warehouse and inventory management partner.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="warehouses.html">Warehouses</a>
+      <a href="services.html">Services</a>
+      <a href="signup.html">Register</a>
+      <a href="about.html">About</a>
+      <a href="Admin.html">Admin</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Stockish | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
