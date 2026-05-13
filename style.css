@@ -35,7 +35,7 @@ nav, main, footer, section, .hero, .form-page, .page-hero, .container {
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
-  position: sticky;
+  position:relative;
   top: 0;
   z-index: 100;
 }
@@ -48,6 +48,7 @@ nav, main, footer, section, .hero, .form-page, .page-hero, .container {
   .navbar img {
     height: 40px;
     display: block;
+    border-radius: 20px;
     
   }
 }
@@ -801,6 +802,9 @@ tr:hover td { background: #f1f5f9; }
   max-width: 1000px;
   margin: 40px auto 0;
 }
+.bg{  background: url("warehouse1.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  color: #ffffff;}
 
 .about-block {
   background: rgba(255,255,255,0.92);
@@ -942,7 +946,7 @@ footer {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: right;
 }
 
 .footer-links a {
